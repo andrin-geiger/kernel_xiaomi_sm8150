@@ -110,6 +110,9 @@ SCHED_FEAT(ENERGY_AWARE, false)
 
 /*
  * Energy aware scheduling algorithm choices:
+ * RT_PREFER_IDLE
+ *   Use the first idle CPU found for FIFO and RR tasks to
+ *   expedite said tasks.
  * EAS_PREFER_IDLE
  *   Direct tasks in a schedtune.prefer_idle=1 group through
  *   the EAS path for wakeup task placement. Otherwise, put
@@ -125,6 +128,7 @@ SCHED_FEAT(ENERGY_AWARE, false)
 SCHED_FEAT(EAS_PREFER_IDLE, true)
 SCHED_FEAT(FIND_BEST_TARGET, true)
 SCHED_FEAT(FBT_STRICT_ORDER, false)
+SCHED_FEAT(RT_PREFER_IDLE, true)
 
 /*
  * Inflate the effective utilization of SchedTune-boosted tasks, which
